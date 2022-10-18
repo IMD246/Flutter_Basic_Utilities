@@ -24,6 +24,7 @@ export 'helper/loading/show_loading_parallel_screen.dart';
 export 'helper/show_connection_state_internet.dart';
 export 'helper/show_snack_bar_scaffold.dart';
 export 'utils/format_number.dart';
+export 'package:intl/intl.dart';
 export 'utils/get_device_size.dart';
 export 'utils/handle_datetime.dart';
 export 'utils/handle_value.dart';
