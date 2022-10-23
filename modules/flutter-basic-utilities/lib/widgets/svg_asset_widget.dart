@@ -9,7 +9,7 @@ class SVGAssetWidget extends StatelessWidget {
   final double? width;
   final double? height;
   final Color? color;
-  final BoxFit fit;
+  final BoxFit? fit;
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
