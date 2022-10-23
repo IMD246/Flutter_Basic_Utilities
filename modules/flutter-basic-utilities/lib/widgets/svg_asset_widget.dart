@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class SVGAssetWidget extends StatelessWidget {
   const SVGAssetWidget(
-      {super.key, required this.urlImage, this.packageName, this.width, this.height, required this.fit, this.color,});
+      {super.key, required this.urlImage, this.packageName, this.width, this.height, this.fit, this.color,});
   final String urlImage;
   final String? packageName;
   final double? width;
