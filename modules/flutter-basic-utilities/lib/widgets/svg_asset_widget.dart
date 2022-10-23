@@ -1,13 +1,14 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SVGAssetWidget extends StatelessWidget {
   const SVGAssetWidget(
-      {super.key, required this.urlImage, this.packageName = "", this.width, this.height, required this.fit,});
+      {super.key, required this.urlImage, this.packageName = "", this.width, this.height, required this.fit, this.color,});
   final String urlImage;
   final String? packageName;
   final double? width;
   final double? height;
+  final Color? color;
   final BoxFit fit;
   @override
   Widget build(BuildContext context) {
@@ -16,6 +17,7 @@ class SVGAssetWidget extends StatelessWidget {
       package: packageName,
       fit: fit,
       width: width,
+      color: color ?? Colors.white,
       height: height,
     );
   }
