@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Widget imageAssetWidget({
   required String? urlImage,
-  required String packageName,
+  required String? packageName,
   Color? color,
   BoxFit? fit,
   int? width,
