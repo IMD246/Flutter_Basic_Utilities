@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 Text textWidget({
   required String text,
-  Color color = Colors.black,
+  Color? color,
   double size = 17,
   TextAlign textAlign = TextAlign.start,
   TextOverflow? textOverflow,

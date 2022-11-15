@@ -39,14 +39,14 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Spacer(),
+          const Spacer(),
           TextFieldWidget(
             hintText: "asd",
             onSubmitted: (value) {},
             onChanged: (value) {},
             onDeleted: () {},
           ),
-          Spacer(),
+          const Spacer(),
         ],
       ),
     );
