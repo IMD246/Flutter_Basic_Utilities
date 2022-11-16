@@ -10,8 +10,6 @@ class TextFieldWidget extends StatefulWidget {
     this.padding = 8,
     this.borderRadius = 8,
     this.hintText = "Tìm kiếm",
-    this.focusColorInput = Colors.red,
-    this.suffixIconColor = Colors.black,
     this.autocorrect = false,
     this.enableSuggestions = false,
     this.borderRadiusBoxDecoration = 8.0,
@@ -32,10 +30,8 @@ class TextFieldWidget extends StatefulWidget {
   final Function(String value) onChanged;
   final Function() onDeleted;
   final double padding;
-  final Color focusColorInput;
   final double borderRadius;
   final String hintText;
-  final Color suffixIconColor;
   final bool enableSuggestions;
   final bool autocorrect;
   final double borderRadiusBoxDecoration;
@@ -95,7 +91,6 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
       },
       cursorColor: widget.cursorColor,
       decoration: InputDecoration(
-        focusColor: widget.focusColorInput,
         hintText: widget.hintText,
         errorText: widget.errorText,
         labelText: widget.labelText,
@@ -109,9 +104,8 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
         suffixIcon: textEditingController.text.isEmpty
             ? Visibility(
                 visible: widget.isShowSearchButton,
-                child: Icon(
+                child: const Icon(
                   Icons.search,
-                  color: widget.suffixIconColor,
                 ),
               )
             : IconButton(
@@ -122,7 +116,6 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
                   });
                 },
                 icon: const Icon(Icons.clear),
-                color: widget.suffixIconColor,
               ),
         focusedErrorBorder: InputBorder.none,
         border: InputBorder.none,
