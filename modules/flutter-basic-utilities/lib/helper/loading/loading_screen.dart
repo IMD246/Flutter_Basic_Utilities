@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_basic_utilities/widgets/text_widget.dart';
 
 import 'loading_screen_controller.dart';
 
@@ -14,6 +15,7 @@ class LoadingScreen {
   void show({
     required BuildContext context,
     required String text,
+    required bool isDarkMode,
   }) {
     if (controller?.update(text) ?? false) {
       return;
@@ -21,6 +23,7 @@ class LoadingScreen {
       controller = showOverlay(
         context: context,
         text: text,
+        isDarkMode: isDarkMode,
       );
     }
   }
@@ -30,10 +33,10 @@ class LoadingScreen {
     controller = null;
   }
 
-  LoadingScreenController showOverlay({
-    required BuildContext context,
-    required String text,
-  }) {
+  LoadingScreenController showOverlay(
+      {required BuildContext context,
+      required String text,
+      bool isDarkMode = false}) {
     // ignore: no_leading_underscores_for_local_identifiers
     final _text = StreamController<String>();
     _text.add(text);
@@ -69,12 +72,13 @@ class LoadingScreen {
                           color: Colors.red,
                         ),
                         const SizedBox(height: 20),
-                        StreamBuilder(
+                        StreamBuilder<String?>(
                           stream: _text.stream,
                           builder: (context, snapshot) {
                             if (snapshot.hasData) {
-                              return Text(
-                                snapshot.data as String,
+                              return textWidget(
+                                text: snapshot.data as String,
+                                color: Colors.black,
                                 textAlign: TextAlign.center,
                               );
                             } else {

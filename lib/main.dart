@@ -36,16 +36,19 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFF1D1D35),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           const Spacer(),
-          TextFieldWidget(
-            hintText: "asd",
-            onSubmitted: (value) {},
-            onChanged: (value) {},
-            onDeleted: () {},
-          ),
+          IconButton(
+              onPressed: () {
+                ShowLoadingParallelScreen().showLoading(
+                  context: context,
+                  isDarkMode: true,
+                );
+              },
+              icon: const Icon(Icons.abc)),
           const Spacer(),
         ],
       ),
