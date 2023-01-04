@@ -11,7 +11,7 @@ export 'widgets/html_widget.dart';
 export 'widgets/icon_widget.dart';
 export 'widgets/image_asset_widget.dart';
 export 'widgets/image_network.dart';
-export 'widgets/outline_button_widget.dart';
+export 'widgets/fill_out_line_button.dart';
 export 'widgets/row_text_widget.dart';
 export 'widgets/shimmer_widget.dart';
 export 'widgets/show_error_api.dart';

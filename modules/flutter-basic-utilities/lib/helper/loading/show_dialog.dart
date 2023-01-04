@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/outline_button_widget.dart';
+import '../../widgets/fill_out_line_button.dart';
 import '../../widgets/text_widget.dart';
 
 class UtilesDialog {

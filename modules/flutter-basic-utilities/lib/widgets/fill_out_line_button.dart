@@ -10,7 +10,7 @@ class FillOutlineButton extends StatelessWidget {
     this.colorText = Colors.black,
     this.paddingText = 20,
   }) : super(key: key);
-  final VoidCallback press;
+  final VoidCallback? press;
   final String text;
   final double minWidth;
   final Color color;
