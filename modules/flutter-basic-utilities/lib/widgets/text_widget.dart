@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 Text textWidget({
@@ -9,6 +11,11 @@ Text textWidget({
   int maxLines = 1,
   FontWeight? fontWeight,
   TextDecoration? textDecoration,
+  String? fontFamily,
+  FontStyle? fontStyle,
+  List<FontVariation>? fontVariations,
+  List<String>? fontFamilyFallback,
+  List<FontFeature>? fontFeatures
 }) {
   return Text(
     text,
@@ -19,6 +26,11 @@ Text textWidget({
         color: color,
         overflow: textOverflow,
         fontWeight: fontWeight,
+        fontFamily: fontFamily,
+        fontStyle: fontStyle,
+        fontVariations: fontVariations,
+        fontFamilyFallback: fontFamilyFallback,
+        fontFeatures: fontFeatures,
         decoration: textDecoration,),
   );
 }
